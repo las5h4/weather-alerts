@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Controller::class, 'showForecast']
-//    function () {
-//    return \App\Sidecar\CheckAlerts::execute()->body();
-//}
+Route::get('/', function () {
+        return \App\Sidecar\HelloWorld::execute()->body();
+    }
 );
-
-Route::get('/alerts', [\App\Http\Controllers\Controller::class, 'showAlerts']);
